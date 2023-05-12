@@ -1,0 +1,15 @@
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\bin\Debug\net7.0\Struct.exe
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\bin\Debug\net7.0\Struct.deps.json
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\bin\Debug\net7.0\Struct.runtimeconfig.json
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\bin\Debug\net7.0\Struct.dll
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\bin\Debug\net7.0\Struct.pdb
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.csproj.AssemblyReference.cache
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.AssemblyInfoInputs.cache
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.AssemblyInfo.cs
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.dll
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\refint\Struct.dll
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.pdb
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\Struct.genruntimeconfig.cache
+C:\xampp\htdocs\fatec\Estrutura de Dados\Struct\obj\Debug\net7.0\ref\Struct.dll
