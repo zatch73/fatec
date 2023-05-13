@@ -1,5 +1,4 @@
-namespace Struct
-{
+namespace Struct{
     public struct ClientS{
         private string nome;
         private string cpf;
