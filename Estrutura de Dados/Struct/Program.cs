@@ -18,6 +18,12 @@ namespace Struct.StructEntidades{
             teclado.aplicarCupomDescontoValor(9.9f);
             teclado.aplicarCupomDescontoPorcentagem(50);
             System.Console.WriteLine(teclado.imprimir()); 
+
+            Professor jeff = new Professor("jeff", 1, 28, 160f, 10f);
+            System.Console.WriteLine(jeff.imprimir());
+            jeff.aumentarCargaHorariaDeTrabalho(40);
+            jeff.descontoSalarialPorFaltaEmPorcentagem(5);
+            System.Console.WriteLine(jeff.imprimir());
         }
     }
 
