@@ -1,0 +1,25 @@
+no novoNO = new no(value)
+
+if(this.inicio == null)
+	this.inicio = novoNo
+	this.fim = novoNo
+else
+	if ( novoNo.value < this.inicio.value)
+		novoNo.proximo = this.inicio
+		this.inicio = novoNo
+	else 
+        LISTA = 5 6 9 10
+        novoNo.proximo = this.inicio.proximo;  // 15 -> 6 
+
+        while (novoNo.value > novoNo.proximo.value || novoNo.proximo.value == null) // 8 > 6 
+            if(novoNo.proximo.value != null){
+                salvar = novoNo.proximo // 6 -> 9
+                novoNo.proximo = NovoNo.proximo.proximo; // 8 -> 9
+                salvar.proximo = novoNo; // 6 -> 8
+            }else {
+                salvar = novoNo.proximo // 15 -> 10
+                novoNo.proximo = NovoNo.proximo.proximo; // 10 -> 15
+                salvar.proximo = novoNo; // 6 -> 8
+            }
+            
+            
