@@ -41,15 +41,7 @@
         <section class="conteudo-visualizar-box">
             <h1>Produtos</h1>
             <?php
-                $listaProdutos = retornarProdutos();
-                while($produto = mysqli_fetch_assoc($listaProdutos)){
-                    echo "<section class=\"conteudo-bloco\">";
-                    echo "<h2>" . $produto["nome"] . "</h2>";
-                    echo "<p>Fabricante: " . $produto["fabricante"] . "</p>";
-                    echo "<p>Descrição: " . $produto["descricao"] . "</p>";
-                    echo "<p>Valor: " . $produto["valor"] . "</p>";
-                    echo "</section>";
-                }
+                
             ?>
         </section>
     </section>

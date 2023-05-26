@@ -2,24 +2,26 @@
 
 session_start();
 require "funcoesBD.php";
+require_once "../controller/Controlador.php";
+
+$controlador = new Controlador();
 
 //Login
-if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
+if(!empty($_POST['inputEmailLog']) && !empty($_POST['inputSenhaLog'])){
 
     $_SESSION['estaLogado'] = TRUE;
     $email = $_POST['inputEmailLog'];
     $senha = $_POST['inputSenhaLog'];
-
     //echo "Email: " . $email . "Senha: " . $senha;
     header('Location:../view/home.php');
     die();
 }
 
 //Cadastro de Cliente
-if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) && 
-   isset($_POST['inputCPF']) && isset($_POST['inputDataNasc']) && 
-   isset($_POST['inputTelefone']) && isset($_POST['inputEmail']) &&
-   isset($_POST['inputSenha'])){
+if(!empty($_POST['inputNome']) && !empty($_POST['inputSobrenome']) && 
+   !empty($_POST['inputCPF']) && !empty($_POST['inputDataNasc']) && 
+   !empty($_POST['inputTelefone']) && !empty($_POST['inputEmail']) &&
+   !empty($_POST['inputSenha'])){
 
     $nome = $_POST['inputNome'];
     $sobrenome = $_POST['inputSobrenome'];
@@ -28,18 +30,16 @@ if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) &&
     $telefone = $_POST['inputTelefone'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
-    
-    //inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
-
+    $controlador->cadastrarCliente($nome, $sobrenome, $cpf, $dataNasc, $telefone, $email, $senha);
     header('Location:../view/cadastroCliente.php');
     die();
 }
 
 //Cadastro de Funcionário
-if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) && 
-   isset($_POST['inputCPFFunc']) && isset($_POST['inputDataNascFunc']) && 
-   isset($_POST['inputTelefoneFunc']) && isset($_POST['inputEmailFunc']) &&
-   isset($_POST['inputSalarioFunc'])){
+if(!empty($_POST['inputNomeFunc']) && !empty($_POST['inputSobrenomeFunc']) && 
+   !empty($_POST['inputCPFFunc']) && !empty($_POST['inputDataNascFunc']) && 
+   !empty($_POST['inputTelefoneFunc']) && !empty($_POST['inputEmailFunc']) &&
+   !empty($_POST['inputSalarioFunc'])){
 
     $nome = $_POST['inputNomeFunc'];
     $sobrenome = $_POST['inputSobrenomeFunc'];
@@ -48,30 +48,19 @@ if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) &&
     $telefone = $_POST['inputTelefoneFunc'];
     $email = $_POST['inputEmailFunc'];
     $salario = $_POST['inputSalarioFunc'];
-    
-    //inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario);
-
+    $controlador->cadastrarFuncionario($nome, $sobrenome, $cpf, $dataNasc, $telefone, $email, $salario);
     header('Location:../view/cadastroFuncionario.php');
     die();
 }
 
-//Cadastro de Produto
+    //Cadastro de Produto
     if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) && 
         !empty($_POST['inputDescricaoProd']) && !empty($_POST['inputValorProd'])){
-
         $nome = $_POST['inputNomeProd'];
         $fabricante = $_POST['inputFabricanteProd'];
         $descricao = $_POST['inputDescricaoProd'];
         $valor = $_POST['inputValorProd'];
-
-        require_once("../model/Produto.php");
-        
-        $produto = new Produto($nome, $fabricante, $descricao, $valor);
-        $bancoDeDados = new BancoDeDados()
-        //inserirProduto($nome, $fabricante, $descricao, $valor);
-
-        header('Location:../view/cadastroProduto.php');
+        $controlador->cadastrarProduto($nome, $fabricante, $descricao, $valor, $controlador);
         die();
     }
-
 ?>

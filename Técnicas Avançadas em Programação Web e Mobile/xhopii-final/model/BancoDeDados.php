@@ -17,10 +17,10 @@ class BancoDeDados {
         return $conexao;
     }
 
-    public function inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha) {
+    public function inserirFuncionario($funcionario) {
         $conexao = $this->conectarBD();
-        $consulta = "INSERT INTO cliente (cpf, nome, sobrenome, dataNascimento, telefone, email, senha) 
-                     VALUES ('$cpf','$nome','$sobrenome','$dataNasc','$telefone','$email','$senha')";
+        $consulta = "INSERT INTO funcionario (cpf, nome, sobrenome, dataNascimento, telefone, email, salario) 
+                     VALUES ('$funcionario->getCpf','$funcionario->getNome','$funcionario->getSobrenome','$funcionario->getDataNasc','$funcionario->getTelefone','$funcionario->getEmail','$funcionario->getSalario')";
         mysqli_query($conexao, $consulta);
     }
 
@@ -31,10 +31,10 @@ class BancoDeDados {
         mysqli_query($conexao, $consulta);
     }
 
-    public function inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario) {
+    public function inserirCliente($cliente) {
         $conexao = $this->conectarBD();
-        $consulta = "INSERT INTO funcionario (cpf, nome, sobrenome, dataNascimento, telefone, email, salario) 
-                     VALUES ('$cpf','$nome','$sobrenome','$dataNasc','$telefone','$email','$salario')";
+        $consulta = "INSERT INTO cliente (cpf, nome, sobrenome, dataNascimento, telefone, email, senha) 
+                     VALUES ('$cliente->getCpf','$cliente->getNome','$cliente->getSobrenome','$cliente->getDataNasc','$cliente->getTelefone','$cliente->getEmail', '$cliente->getSenha')";
         mysqli_query($conexao, $consulta);
     }
 
